@@ -1,0 +1,28 @@
+
+private LruCache<String, Bitmap> memoryCache;
+
+
+
+memoryCache = new LruCache<String, Bitmap>(cachesize) {
+			@SuppressLint("NewApi")
+			@Override
+   protected int sizeOf(String key, Bitmap value) {
+	if (android.os.Build.VERSION.SDK_INT >= 12) {
+		return value.getByteCount();
+	} else {
+		return value.getRowBytes() * value.getHeight();
+	}
+    }
+};
+
+=================================
+
+public void addBitmapToMemoryCache(String key, Bitmap bitmap) {
+		if (getBitmapFromMemCache(key) == null) {
+			memoryCache.put(key, bitmap);
+		}
+	}
+
+public Bitmap getBitmapFromMemCache(String key) {
+		return memoryCache.get(key);
+	}

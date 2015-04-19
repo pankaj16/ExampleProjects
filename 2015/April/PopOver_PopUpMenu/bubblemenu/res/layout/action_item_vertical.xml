@@ -1,0 +1,31 @@
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="horizontal"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:clickable="true"
+	android:focusable="true"
+	android:padding="5dp"
+	android:background="@drawable/action_item_btn">
+
+	<ImageView
+	    android:id="@+id/iv_icon2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:paddingTop="3dp"
+	     android:paddingBottom="3dp"
+	    android:src="@drawable/icon" />
+
+	<TextView
+	    android:id="@+id/tv_title"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:gravity="center_vertical"
+	    android:paddingLeft="5dip"
+	    android:paddingBottom="3dp"
+	    android:paddingTop="3dp"
+	    android:paddingRight="10dip"
+	    android:text="Chart"
+	    android:textColor="#fff" />
+									         
+</LinearLayout>         
